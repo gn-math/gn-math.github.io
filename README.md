@@ -1,4 +1,4 @@
-# gn-math.github.io
+# [gn-math.github.io](https://tester-hisham.github.io/Math/)
 gn-math is the best unblocked games site to play at school.
 ## features:
 - hundreds of links (in the discord)
