@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html,  body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000;
+      color: #ffffff !important;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background-color: #4a148c !important;
+    }
+  </style>
+</head>
+<body>
+  <a id="button" class="button" >Launch</a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const button = document.getElementById('button');
+      button.addEventListener('click', launch);
+    });
+
+    function launch() {
+      try {
+        fetch("https://cdn.jsdelivr.net/gh/gn-math/gn-math-DONTDMCA@main/singlefile.html?t="+Date.now())
+          .then(response => response.text())
+          .then(text => {
+            const newWin = window.open("about:blank", "_blank");
+            if (newWin) {
+              newWin.document.open();
+              newWin.document.write(text);
+              newWin.document.close();
+            }
+          });
+      } catch (error) {
+        console.error('error:', error);
+      }
+    }
+  </script>
+</body>
+</html>
