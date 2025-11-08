@@ -1,3 +1,4 @@
+# PLEASE DONT DMCA THIS REPOSITORY, NO GAME ASSETS OR INTELLECTUAL PROPERTY IS HOSTED HERE, ALL FILES HERE ARE MADE, AND CODED BY, ME (genizy/breadbb)
 # gn-math.github.io
 gn-math is the best unblocked games site to play at school.
 ## features:
