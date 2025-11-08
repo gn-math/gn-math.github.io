@@ -600,6 +600,19 @@ footer {
     }
 
     .zone-item:hover {
-        transform: translateY(-4px) scale(1.01);
+        transform: translateY(-10px) scale(1.01);
     }
+
+}
+#settings img {
+    transition: transform 0.4s ease;
+}
+
+#settings:hover img {
+    transform: rotate(40deg);
+}
+
+#settings,
+#settings:hover {
+    box-shadow: none;
 }
