@@ -40,7 +40,7 @@
     <meta name="twitter:title" content="GN-Math">
     <meta name="twitter:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-Math. Fast, free, no downloads—perfect for school or home.">
     <style>
-:root {
+        :root {
     --primary: #fc2651;
     --primary-hover: #e91e47;
     --primary-light: rgba(252, 38, 81, 0.1);
@@ -642,8 +642,21 @@ footer {
     }
 
     .zone-item:hover {
-        transform: translateY(-4px) scale(1.01);
+        transform: translateY(-10px) scale(1.01);
     }
+
+}
+#settings img {
+    transition: transform 0.4s ease;
+}
+
+#settings:hover img {
+    transform: rotate(40deg);
+}
+
+#settings,
+#settings:hover {
+    box-shadow: none;
 }
     </style>
 </head>
@@ -660,7 +673,7 @@ footer {
                 </select>
             </div>
             <div class="control-buttons">
-                <button id="settings" style="background-color: var(--primary-color); color: white; border: none; border-radius: 4px; padding: 0.5rem 1rem; font-size: 16px; cursor: pointer;">Settings</button>
+                <button id="settings" style="background-color: var(--primary-color); color: white; border: none; border-radius: 4px; padding: 0.5rem 1rem; font-size: 16px; cursor: pointer;"><img src="setting.png" alt="settings" width="45px"></button>
             </div>
         </div>
     </header>
@@ -734,9 +747,7 @@ footer {
             <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
         </div>
     </footer>
-
-    <script>
-        const container = document.getElementById('container');
+    <script>const container = document.getElementById('container');
 const zoneViewer = document.getElementById('zoneViewer');
 let zoneFrame = document.getElementById('zoneFrame');
 const searchBar = document.getElementById('searchBar');
@@ -1430,7 +1441,13 @@ XMLHttpRequest.prototype.open = function (method, url) {
 
 HTMLCanvasElement.prototype.toDataURL = function (...args) {
     return "";
-};
+};</script>
+    <script>
+        const search = new URLSearchParams(window.location.search);
+        const privacy = search.get('privacy');
+        if (privacy) {
+            loadPrivacy();
+        }
     </script>
 </body>
 </html>
