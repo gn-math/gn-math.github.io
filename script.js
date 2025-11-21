@@ -286,6 +286,28 @@ function aboutBlank() {
     })
 }
 
+
+function pictureInPicture() {
+    const id = document.getElementById('zoneId')?.textContent;
+    if (!id) return;
+
+    const zone = zones.find(z => z.id + '' === id);
+    if (!zone) return;
+
+    const src = zone.url
+        .replace('{COVER_URL}', coverURL)
+        .replace('{HTML_URL}', htmlURL)
+        + '?t=' + Date.now();
+
+    new PiPPlayer({
+        width: "100%",
+        height: "100%",
+        ui: false,
+        sandbox: "allow-scripts allow-same-origin",
+        fetchFullPage: true
+    }).open(src).catch(e => console.warn('PiP open failed', e));
+}
+
 function closeZone() {
     zoneViewer.hidden = false;
     zoneViewer.style.display = "none";
