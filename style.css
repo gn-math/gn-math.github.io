@@ -163,32 +163,31 @@ header {
     color: var(--glass);
 }
 
+#filterOptions {
+    padding: 0.875rem 1rem;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    color: var(--text-muted);
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 130px;
+    box-shadow: var(--shadow-sm);
+}
+
+#filterOptions:hover {
+    background: var(--text);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+    color: var(--glass);
+}
+
 .control-buttons {
     display: flex;
     gap: 0.5rem;
-}
-
-#settings {
-    background: rgba(255, 255, 255, 0.1);
-    border: 0;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0.75rem;
-    border-radius: var(--radius);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(20px);
-}
-
-#settings:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow);
 }
 
 main {
@@ -495,30 +494,6 @@ main {
     transform: translateY(-1px);
 }
 
-#settings-button {
-    width: 100%;
-    padding: 0.875rem 1rem;
-    background: var(--gradient-primary);
-    color: white;
-    border: 0;
-    border-radius: var(--radius);
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow-sm);
-}
-
-#settings-button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-}
-
-#settings-button:active {
-    transform: translateY(0);
-}
-
 footer {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
@@ -604,15 +579,40 @@ footer {
     }
 
 }
-#settings img {
+.control-button img {
     transition: transform 0.4s ease;
+    width: 24px;
+    height: 24px;
 }
 
-#settings:hover img {
+.control-button:hover img {
     transform: rotate(40deg);
 }
 
-#settings,
-#settings:hover {
+.control-button,
+.control-button:hover {
     box-shadow: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+.control-button:active {
+    transform: translateY(0);
+}
+
+.control-buttons button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+}
+.control-buttons button:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
