@@ -164,7 +164,7 @@ header {
 }
 
 #filterOptions {
-    padding: 0.875rem 1rem;
+    padding: .875rem 0.5rem;
     border: 0;
     border-radius: var(--radius);
     background: var(--glass);
@@ -174,7 +174,7 @@ header {
     cursor: pointer;
     outline: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    min-width: 130px;
+    min-width: 140px;
     box-shadow: var(--shadow-sm);
 }
 
@@ -602,7 +602,7 @@ footer {
 .control-buttons button {
     background: rgba(255, 255, 255, 0.1);
     border: 0;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     padding: 0;
     width: 44px;
@@ -615,4 +615,29 @@ footer {
 }
 .control-buttons button:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+.settings-button {
+    background: var(--gradient-primary);
+    color: white;
+    border: 0;
+    padding: 0.875rem 1.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+    min-width: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.settings-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.settings-button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
 }
