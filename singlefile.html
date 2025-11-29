@@ -658,6 +658,31 @@ footer {
 .control-buttons button:hover {
     background: rgba(255, 255, 255, 0.2);
 }
+.settings-button {
+    background: var(--gradient-primary);
+    color: white;
+    border: 0;
+    padding: 0.875rem 1.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+    min-width: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.settings-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.settings-button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
     </style>
 </head>
 <body class="dark-mode">
@@ -1370,9 +1395,9 @@ settings.addEventListener('click', () => {
     document.getElementById('popupTitle').textContent = "Settings";
     const popupBody = document.getElementById('popupBody');
     popupBody.innerHTML = `
-    <button id="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
+    <button class="settings-button" onclick="darkMode()">Toggle Dark Mode</button>
     <br><br>
-    <button id="settings-button" onclick="tabCloak()">Tab Cloak</button>
+    <button class="settings-button" onclick="tabCloak()">Tab Cloak</button>
     <br>
     `;
     popupBody.contentEditable = false;
