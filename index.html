@@ -100,6 +100,7 @@
                 <button onclick="aboutBlank()">Open in New Tab</button>
                 <button onclick="downloadZone()">Download</button>
                 <button onclick="closeZone()">Close</button>
+                <button onclick="pictureInPicture()">Picture in Picture</button>
             </div>
         </div>
         <iframe id="zoneFrame"></iframe>
@@ -136,6 +137,7 @@
             <input type="file" id="importData" style="display: none;" onchange="loadData(event)">
         </div>
     </footer>
+    <script src="pip.js"></script>
     <script src="script.js"></script>
     <script>
         const search = new URLSearchParams(window.location.search);
